@@ -19,7 +19,6 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
-  volumeMode: ebs-static
   resources:
     requests:
       storage: 2Gi
