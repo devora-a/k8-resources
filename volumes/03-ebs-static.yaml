@@ -10,7 +10,7 @@ spec:
   csi:
     driver: ebs.csi.aws.com
     fsType: ext4
-    volumeHandle: vol-00d2e0698a3049608
+    volumeHandle: vol-08ce21842c6223410
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -39,5 +39,5 @@ spec:
   - name: persistent-storage
     persistentVolumeClaim:
       claimName: ebs-static
-  nodeSelector:
+  nodeSelector:                  #this will select the node with the same zone as the EBS volume
     topology.kubernetes.io/zone: us-east-1b
